@@ -1,0 +1,9 @@
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: simple-webapp-docker-image
+spec:
+  type: image
+  params:
+    - name: url
+      value: docker.io/dirane/simple-webapp-docker:latest 

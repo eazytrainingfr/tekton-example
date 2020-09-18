@@ -1,0 +1,15 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  name: simple-webapp-docker-pipeline-run-1
+spec:
+  serviceAccountName: simple-webapp-docker-service
+  pipelineRef:
+    name: simple-webapp-docker-pipeline
+  resources:
+    - name: source-repo
+      resourceRef:
+        name: simple-webapp-docker-git
+    - name: web-image
+      resourceRef:
+        name: simple-webapp-docker-image 
