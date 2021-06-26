@@ -19,7 +19,7 @@ spec:
         type: image
   steps:
     - name: replace-image
-      image: mikefarah/yq
+      image: mikefarah/yq:3
       command: ["yq"]
       args:
         - "w"
